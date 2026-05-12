@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black: #0B0B0B;
+  --color-charcoal: #161616;
+  --color-ivory: #F5EFE7;
+  --color-beige: #D8C3A5;
+  --color-gold: #B89B72;
+
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-black);
+  color: var(--color-ivory);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
